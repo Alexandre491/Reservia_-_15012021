@@ -63,6 +63,13 @@ nav ul
     justify-content: flex-end;
 }
 
+nav ul li:nth-child(3) a 
+{
+	color: #0065FC;
+}
+
+
+
 nav li
 {
     margin-left: 3.5em; 
@@ -73,7 +80,7 @@ a
 {
     text-decoration:none;
     color:black;
-    padding-top: 3.1em;
+    padding-top: 2.4em;
     font-size: 22px;
 }
 
@@ -89,19 +96,19 @@ h1, h2, .sous-titre
 {
     font-family: ralewaybold;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 31px;
     margin:0;
 }
 
 p:not(#filtres)
 {
     margin-right: 20px;
-    font-size: 23px;
+    font-size: 21px;
     font-family: ralewayregular;
 }
 .sous-titre
 {
-    margin-top: 1em;
+    margin-top: 0.3em;
 }
 .sous-titre, a
 {
@@ -129,7 +136,7 @@ form
     overflow: hidden;
 	height: 4em;
     width: 35em;
-    background-color: #F2F2F2;
+    background-color: #eceaea;
     border-radius: 20px;
     padding-left: 3px;
     align-items: center;
@@ -137,7 +144,7 @@ form
 
 form img
 {
-    width: 20px;
+    width: 17px;
     margin:20px;
     align-items: center;
 
@@ -145,7 +152,7 @@ form img
 
 input 
 {
-    height: 94%;
+    height: 90%;
     margin: 0px;
     width: 40em;
     border:none;
@@ -191,7 +198,7 @@ button
     height: 4em;
     align-items: center;
     border-radius: 40px;
-    border: 4px solid #F2F2F2;
+    border: 4px solid #e0dfdf;
     margin: 1em;
     padding-right: 1em; 
 }
@@ -214,7 +221,7 @@ button
     min-width: 19px;
     border-radius: 40px;
     margin-right: 10px;
-    margin-left: -2px;
+    margin-left: -5px;
 }
 #filtres figure:hover
 {
@@ -233,7 +240,7 @@ button
 
 #filtres div p 
 {
-    font-size: 30px;
+    font-size: 24px;
     font-family: ralewaybold;
     padding-left: 0.5em;
 }
@@ -245,7 +252,6 @@ button
 {
     display: flex;
     align-items: center;
-    margin-top: 13px;
     margin-bottom: 2em;
 }
 
@@ -262,7 +268,7 @@ button
     margin-right: 0.5em;
     margin-left: 0;
     padding: 4px;
-    border: 0.1em solid #F2F2F2;
+    border: 0.1em solid #e0dfdf;
 }
 
 #info img
@@ -277,13 +283,11 @@ button
 .Hebergements
 {
     margin: 0;
-    background-color: #F2F2F2;
+    background-color: #eceaea;
     border-radius: 30px; 
     padding-top: 3em; 
-    padding-left: 3em;
-    width: 87%;
-    padding-right: 3em;
-    min-width: 470px
+    padding-left: 2em;
+    padding-right: 2em;
 
 }
 #hebergement-a-marseille/* regroupe toutes 
@@ -291,18 +295,18 @@ button
 {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-    width: 99%;
+	justify-content: space-around;
 
 }
 #hebergement-a-marseille article/*regroupe une vignette*/
 {
     border-radius: 30px;
     background-color: #ffff;
-    min-width: 435px;
-    max-width: 435px;
-    padding: 0.5em;
-    margin:1em;
+    min-width: 275px;
+    max-width: 275px;
+    height: 250px;
+    padding: 0.4em;
+    margin: 1.2em;
     box-shadow: 2px 3px 13px rgba(1, 4, 0, 0.2);
 }
 
@@ -310,14 +314,21 @@ button
 {
     width: 100%;
     border-radius: 25px 25px 0px 0px;
-    height: 11em;
+    height: 9em;
 }
+
+#hebergement-a-marseille article p 
+{
+	margin-bottom: 0;
+	margin-top: 0.3em;
+}
+
 
 #hebergement-a-marseille article p+img
 {
     max-width: 30%;
     height: 2em;
-    margin-left: 1em;
+    margin-left: 1.2em;
     margin-bottom: 0.7em;
 }
 #hebergement-a-marseille article :not(img)
@@ -327,11 +338,13 @@ button
 #hebergement-a-marseille + p
 {
     margin-bottom: 2em;
+    margin-left: 1em;
 }
 
 .Hebergements h2
 {
     margin-bottom: 1em;
+    margin-left: 1em;
 }
 
 
@@ -347,7 +360,7 @@ button
 aside
 {
     margin-left: 5em;
-    background-color: #F2F2F2;
+    background-color: #eceaea;
     border-radius: 30px;
     padding-top: 3em;
     padding-left: 54px;
@@ -403,8 +416,9 @@ aside div:nth-child(4) div:nth-child(1) img
     margin-top: 2em;
     margin-bottom: 3em;
     padding: 0.5em;
-    max-width: 35em;
-    min-width: 35em;
+    max-width: 39em;
+    min-width: 34em;
+    height: 180px;
     background-color: #ffff;
     box-shadow: 2px 3px 13px rgba(1, 4, 0, 0.2);
 }
