@@ -394,10 +394,15 @@ aside div:nth-child(4) div:nth-child(1) img
     width: 12em;
 }
 
+aside article div p+img
+{
+    width: 7em; 
+}
+
 .vignette figure 
 {
     border-radius: 25px 0px 0px 25px;
-    height: 14em;
+    height: 11.4em;
     width: 12em;
     overflow: hidden;
     margin: 0;
@@ -406,7 +411,8 @@ aside div:nth-child(4) div:nth-child(1) img
 
 .vignette figure img
 {
-    width: 20em;
+    width: 18em;
+    height: 16em;
 }
 
 
@@ -444,12 +450,6 @@ section .div
     flex-wrap: wrap;
     height: 40em;
     margin-bottom: 10em;
-}
-.split
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 section img 
