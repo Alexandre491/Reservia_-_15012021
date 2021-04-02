@@ -24,9 +24,10 @@
 
 }
 
-/* ELEMENT PRINCIPAUX */
 
-body
+/* ELEMENTS PRINCIPAUX .................. */
+
+#body
 {
     width: 93%;
     margin:auto;
@@ -39,7 +40,8 @@ body
 }
 
 
-/* NAVIGATEUR */
+/* NAVIGATEUR................... */
+
 
 #fig-logo img
 {
@@ -68,8 +70,6 @@ nav ul li:nth-child(3) a
 	color: #0065FC;
 }
 
-
-
 nav li
 {
     margin-left: 3.5em; 
@@ -80,7 +80,7 @@ a
 {
     text-decoration:none;
     color:black;
-    padding-top: 2.4em;
+    padding-top: 2.7em;
     font-size: 22px;
 }
 
@@ -127,7 +127,8 @@ p
     box-shadow: 2px 3px 13px rgba(1, 4, 0, 0.2);
 }
 
-/*FORMULAIRE VILLE*/
+/* FORMULAIRE VILLE RECHERCHE VILLE................... */
+
 
 form
 {
@@ -179,7 +180,8 @@ button
 
 }
 
-/* FILTRES*/
+/* FILTRES DE RECHERCHE................... */
+
 
 #filtres
 {
@@ -277,8 +279,8 @@ button
 }
 
 
+/* HEBERGEMENT A MARSEILLE................... */
 
-/*HEBERGEMENT A MARSEILLE*/
 
 .Hebergements
 {
@@ -300,6 +302,8 @@ button
 }
 #hebergement-a-marseille article/*regroupe une vignette*/
 {
+    display: flex;
+    flex-direction: column;
     border-radius: 30px;
     background-color: #ffff;
     min-width: 275px;
@@ -348,13 +352,13 @@ button
 }
 
 
+/* LES PLUS POPULAIRES................... */
 
-/*LES PLUS POPULAIRES*/
 
-#bloc
+#bloc-hebergements-populaires
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 aside
@@ -369,7 +373,7 @@ aside
     min-width: 650px;
 }
 
-.chapeau,.vignette
+.chapeau, article
 {
     display: flex;
 }
@@ -399,7 +403,7 @@ aside article div p+img
     width: 7em; 
 }
 
-.vignette figure 
+aside article figure 
 {
     border-radius: 25px 0px 0px 25px;
     height: 11.4em;
@@ -409,14 +413,14 @@ aside article div p+img
     margin-right: 2em;
 }
 
-.vignette figure img
+aside article figure img
 {
     width: 18em;
     height: 16em;
 }
 
 
-.vignette
+aside article
 {
     border-radius: 30px;
     margin-top: 2em;
@@ -428,7 +432,7 @@ aside article div p+img
     background-color: #ffff;
     box-shadow: 2px 3px 13px rgba(1, 4, 0, 0.2);
 }
-.vignette article p+img
+aside article p+img
 {
     max-width: 40%;
     height: 3em;
@@ -436,42 +440,88 @@ aside article div p+img
 
 
 
-/*ACTIVITES A MARSEILLE*/
+/* ACTIVITES A MARSEILLE................... */
 
 section
 {
     margin-top: 5em;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 section .div
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     height: 40em;
-    margin-bottom: 10em;
+    margin-bottom: 4em;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 section img 
 {
     width: 100%;
     border-radius: 25px 25px 0px 0px;
-    height: 11em;
 }
 
 .div div 
 {
-    min-width: 33em;
-    max-width: 33em;
+    min-width: 26em;
+    max-width: 26em;
     border-radius: 30px;
-    height: 38em
+    height: 35em;
+}
+.div div:[:(not)first-child]
+{
+    margin-left: 1em;
 }
 
+.div div:nth-child(1) img
+{
+    height: 30.5em;
+}
+section .div div:nth-child(2)
+{
+    height: 15em;
+}
 .div .grande
 {
     height: 90%;
 }
 
+section .div div:nth-child(3)
+{
+    height: 15em;
+}
+.div .grande
+{
+    height: 90%;
+}
+
+.div div:nth-child(4) img
+{
+    height: 30.5em;
+}
+
+section .div div:nth-child(5)
+{
+    height: 15em;
+}
+.div .grande
+{
+    height: 90%;
+}
+section .div div:nth-child(6)
+{
+    height: 15em;
+}
+.div .grande
+{
+    height: 10.5em;
+}
 /* FLEX*/ 
 
 .div div:nth-child(2) div:first-child
@@ -500,10 +550,6 @@ section img
     height: 10em;
 }
 
-.div div:nth-child(4) img
-{
-    height: 14.5em;
-}
 
 /*TEXTE*/
 
@@ -517,35 +563,184 @@ section h2
     margin-bottom: 50px;
 }
 
-/*FOOTER*/
+/* FOOTER.................. */
 
 footer 
 {
-    background: #F2F2F2;
+    background: #eceaea;
     height: 15em;
-    width: 100%
+    width: 100%;
+    padding-top: 3em;
 }
 .conteneur 
 {
     display: flex;
-    margin-left: 12em;
+    margin-left: 9em;
     justify-content: space-between;
-    align-items: center;
-    width: 80%;
+    width: 77%;
     align-items: flex-start;
 }
 
 
-@media screen (min-width: 600) and(max-width: 1024)
+
+/* MEDIA QUERIES................... */
+
+
+
+@media all and (max-width: 600px) /* règles réalisées sur un support de 670px de large*/
 {
 
+/*HEADER*/
+
+    #fig-logo
+    {
+       max-width: 32%;
+    }
+    #body
+    {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    div .titre
+    {
+        width: 600px;
+    }
+
+/* TEXTE */ 
+
+    h1, h2, .sous-titre
+    {
+        font-size: 44px;
+    }
+    p:not(#filtres)
+    {
+        font-size: 31px;
+    }
+
+/* FORMULAIRE RECHERCHER*/
+    form
+    {
+        margin: 3em;
+        width: 42em;
+    }
+    button
+    {
+        width: 30%;
+        border-radius: 20px;
+    }
+/* FILTRES DE RECHERCHE*/
+
+    #filtres
+    {
+        margin-top: -2em;
+    }
+
+    #filtres div p
+    {
+        font-size: 31px;
+    }
+
+    #filtres .filtre
+    {
+        margin-right: 26em;
+    }
+   #menu_principal ul li:nth-child(3) /*listes a puce */
+    {
+        order:(1);
+    }
+
+/* HEBERGEMENT A MARSEILLE */
+
+    #bloc :nth-child(2)
+    {
+        order:(1);
+    }
+    .Hebergements
+    {
+        background-color: #ffff
+    }
+    .Hebergements h2 /* titre hebergement */
+    {
+        margin-left: 0;
+    }
+
+
+    #hebergement-a-marseille article  
+    {
+        max-width: 80%;
+        height: 20em;
+    }
+
+    #hebergement-a-marseille article :first-child /* image article hébergement*/
+    {
+        height: 11em;
+    }
+/* ASIDE*/
+    aside
+    {
+        padding-left: 3em;
+        padding-right: 4em;
+        margin-left:-2em;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        width: 100%
+    }
+
+    .vignette
+    {
+        height: 16em;
+    }
+
+    .vignette figure
+    {
+        width: 16em;
+    }
+
+    .vignette figure img
+    {
+        height: 16em;
+    }
+/*  ACTIVITE A MARSEILLE */
+
+    section .div
+    {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 4em;
+        height: max-content;
+        overflow: auto;
+    }
+    .div div
+    {
+        min-width: 80%;
+        height: 20em;
+        margin-bottom: 2em;
+    }
+
+    .div div:nth-child(1) img
+    {
+        height: 15.5em;
+    }
+    .div div:nth-child(4) img
+    {
+        height: 15.5em;
+    }
+
+/* FOOTER */
+
+    .conteneur 
+    {
+        display:block;
+    }
+
+    .conteneur div 
+    {
+        margin-bottom: 5em;
+    }
 }
-@media screen (min-width: 320) and(max-width: 600)
-{
-
-}
-
-
 
 
 
